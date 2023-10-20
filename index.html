@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    
+</head>
+<body>
+    <div class="content">
+        <div class="sideBar">
+            <div class="tasksContainer">
+                <h1>Tasks</h1>
+                <button id="addTaskBtn" class="btn" >Add task</button>
+                <div class="tasksSidebarList">
+
+                </div>
+            </div>
+            <div class="projectsContainer">
+                <h1>Projects</h1>
+                <button id="addProjectBtn" class="btn">Add project</button>
+                <div class="projectSidebarsList">
+
+                </div>
+            </div>
+        </div>
+        <div class="pageContent">
+            <div class="contentContainer">
+                <div><h1>Recent tasks</h1>
+                </div>
+                <div class="taskElementsContainer"> 
+                    <div class="taskElement">task 1</div>
+                </div>
+            </div>
+            <div class="newTaskContainer">
+                <h1>New Task</h1>
+                <form action="submit" id="newTaskForm">
+                    <div class="newTaskFormInput">
+                        <label for="taskTitle">Title</label>
+                        <input type="text" name="taskTitle" id="taskTitle" minlength="1" maxlength="20">
+                    </div>
+                    <div class="newTaskFormInput">
+                        <label for="tascDescription">Description</label>
+                        <textarea name="tascDescription" id="tascDescription" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="newTaskFormInput">
+                        <div>
+                            <input type="radio" name="priority" id="low" class="inpitRadio" value="Low">
+                            <label for="low">Low</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="priority" id="medium" class="inpitRadio" value="Medium">
+                            <label for="medium">Medium</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="priority" id="high" class="inpitRadio" value="High">
+                            <label for="high">High</label>
+                        </div>
+                    </div>
+                    <div class="newTaskFormInput">
+                        <label for="dueDate">DueDate</label>
+                        <input type="date" name="dueDate" id="dueDate">
+                    </div>
+                    <div class="newTaskFormInput">
+                        <button id="cnclTaskBtn" class="btn" type="button">cancel</button>
+                        <button type="button" id="addaddTaskBtn" class="btn">add</button>
+                    </div>
+                </form>
+            </div>
+            <div class="newProjectContainer" >
+                <h1>New Project</h1>
+                <form action="" id="newprojectForm">
+                    <div class="newprojectFormInput">
+                        <label for="projectTitle">Title</label>
+                        <input type="text" name="projectTitle" id="projectTitle">
+                    </div>
+                    <div class="newprojectFormInput">
+                        <button id="cnclProjectkBtn" class="btn" type="button">cancel</button>
+                        <button id="addProjectkBtn" class="btn" type="button">add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
