@@ -44,6 +44,12 @@
                         <textarea name="tascDescription" id="tascDescription" cols="30" rows="5"></textarea>
                     </div>
                     <div class="newTaskFormInput">
+                        <label for="projectsToChooseInput">Project:</label>
+                        <input list="projectsToChoose" id="projectsToChooseInput"/>
+                        <datalist id="projectsToChoose">
+                        </datalist>
+                    </div>
+                    <div class="newTaskFormInput">
                         <div>
                             <input type="radio" name="priority" id="low" class="inpitRadio" value="Low">
                             <label for="low">Low</label>
@@ -80,6 +86,20 @@
                     </div>
                 </form>
             </div>
+            <div class="renProjectContainer">
+                <h1>Edit Project</h1>
+                <form action="" id="renProjectForm">
+                    <div class="renprojectFormInput">
+                        <label for="renprojectTiTle">New title</label>
+                        <input type="text"  id="renprojectTiTle">
+                    </div>
+                    <div class="renprojectFormInput">
+                        <button id="cancelrenProjbtn" type="button">cancel</button>
+                        <button id="renProjectbtn" type="button">save</button>
+                    </div>
+                </form>
+            </div>
+            
         </div>
     </div>
     <script src="bundle.js"></script>
