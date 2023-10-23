@@ -29,7 +29,7 @@
                 <div><h1>Recent tasks</h1>
                 </div>
                 <div class="taskElementsContainer"> 
-                    <div class="taskElement">task 1</div>
+                
                 </div>
             </div>
             <div class="newTaskContainer">
@@ -49,13 +49,13 @@
                         <datalist id="projectsToChoose">
                         </datalist>
                     </div>
-                    <div class="newTaskFormInput">
+                    <div class="newTaskFormInput radionewTaskFormInput">
                         <div>
                             <input type="radio" name="priority" id="low" class="inpitRadio" value="Low">
                             <label for="low">Low</label>
                         </div>
                         <div>
-                            <input type="radio" name="priority" id="medium" class="inpitRadio" value="Medium">
+                            <input type="radio" name="priority" id="medium" class="inpitRadio" value="Medium" >
                             <label for="medium">Medium</label>
                         </div>
                         <div>
@@ -73,6 +73,48 @@
                     </div>
                 </form>
             </div>
+            <div class="editTaskContainer">
+                <h1>Edit Task</h1>
+                <form action="submit" id="editTaskForm">
+                    <div class="editTaskFormInput">
+                        <label for="edittaskTitle">Title</label>
+                        <input type="text" name="edittaskTitle" id="edittaskTitle" minlength="1" maxlength="20">
+                    </div>
+                    <div class="editTaskFormInput">
+                        <label for="edittascDescription">Description</label>
+                        <textarea name="edittascDescription" id="edittascDescription" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="editTaskFormInput">
+                        <label for="editprojectsToChooseInput">Project:</label>
+                        <input list="editprojectsToChoose" id="editprojectsToChooseInput"/>
+                        <datalist id="editprojectsToChoose">
+                        </datalist>
+                    </div>
+                    <div class="editTaskFormInput editradioeditTaskFormInput">
+                        <div>
+                            <input type="radio" name="priority" id="editlow" class="editinpitRadio" value="Low">
+                            <label for="low">Low</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="priority" id="editmedium" class="editinpitRadio" value="Medium" >
+                            <label for="medium">Medium</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="priority" id="edithigh" class="editinpitRadio" value="High">
+                            <label for="high">High</label>
+                        </div>
+                    </div>
+                    <div class="editTaskFormInput">
+                        <label for="dueDate">DueDate</label>
+                        <input type="date" name="dueDate" id="editdueDate">
+                    </div>
+                    <div class="editTaskFormInput" id="editnewTaskFormInputButtonsContainer">
+                        <button id="editcnclTaskBtn" class="btn" type="button">cancel</button>
+                        <button type="button" id="editaddaddTaskBtn" class="btn">add</button>
+                    </div>
+                </form>
+            </div>
+            
             <div class="newProjectContainer" >
                 <h1>New Project</h1>
                 <form action="" id="newprojectForm">
@@ -98,6 +140,15 @@
                         <button id="renProjectbtn" type="button">save</button>
                     </div>
                 </form>
+            </div>
+            <div class="viewTaskContainer">
+                <div class="taskDetailsContainer">
+
+                </div>
+                <div class="viewTaskButtonsContainer">
+
+                </div>
+                
             </div>
             
         </div>
