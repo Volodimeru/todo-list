@@ -9,148 +9,146 @@
 <body>
     <div class="content">
         <div class="sideBar">
-            <div class="tasksContainer">
-                <h1>Tasks</h1>
-                <button id="addTaskBtn" class="btn" >Add task</button>
-                <div class="tasksSidebarList">
-
-                </div>
+            <div class="sideBarTasksContainer">
+                <button id="allTasksviewBtn">All Tasks</button>
+                <button>Today</button>
+                <button>Week</button>
+                <button>Month</button>
             </div>
-            <div class="projectsContainer">
-                <h1>Projects</h1>
-                <button id="addProjectBtn" class="btn">Add project</button>
-                <div class="projectSidebarsList">
-
+            <div class="sideBarProjectsContainer">
+                <button id="projectsListBtn">Projects</button>
+                <div class="projectsnewContainer">
+                    <button id="addProjectBtn" class="btn">Add project</button>
+                    <div class="sideBarProjectsList">
+                    </div>
+                </div>
+                <div class="projectsNewProjectContainer" >
+                    <h1>New Project</h1>
+                    <form action="" id="newprojectForm">
+                        <div class="newprojectFormInput">
+                            <label for="projectTitle">Title</label>
+                            <input type="text" name="projectTitle" id="projectTitle" placeholder="Enter name">
+                        </div>
+                        <div class="newprojectFormInput">
+                            <button id="cnclProjectkBtn" class="btn" type="button">cancel</button>
+                            <button id="addProjectkBtn" class="btn" type="button">add</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="pageContent">
-            <div class="contentContainer">
-                <div><h1>Recent tasks</h1>
+            <div class="contentContainer contentWindow">
+            </div>
+            <div class="projectsContainer contentWindow">
+                <button id="addTaskBtn">Add task</button>
+                <div class="projectsProjectsListContainer">
+                    
                 </div>
-                <div class="taskElementsContainer"> 
-                
+                <div class="projectsEditProjectContainer">
+                    <h1>New name</h1>
+                    <form action="" id="renProjectForm">
+                        <div class="renprojectFormInput">
+                            <label for="renprojectTiTle">New title</label>
+                            <input type="text"  id="renprojectTiTle">
+                        </div>
+                        <div class="renprojectFormInput projectEditButtonsContainer" >
+                            <button id="cancelrenProjbtn" type="button">cancel</button>
+                            <button id="renProjectbtn" type="button">save</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="newTaskContainer">
-                <h1>New Task</h1>
-                <form action="submit" id="newTaskForm">
-                    <div class="newTaskFormInput">
-                        <label for="taskTitle">Title</label>
-                        <input type="text" name="taskTitle" id="taskTitle" minlength="1" maxlength="20">
-                    </div>
-                    <div class="newTaskFormInput">
-                        <label for="tascDescription">Description</label>
-                        <textarea name="tascDescription" id="tascDescription" cols="30" rows="5"></textarea>
-                    </div>
-                    <div class="newTaskFormInput">
-                        <label for="projectsToChooseInput">Project:</label>
-                        <input list="projectsToChoose" id="projectsToChooseInput"/>
-                        <datalist id="projectsToChoose">
-                        </datalist>
-                    </div>
-                    <div class="newTaskFormInput radionewTaskFormInput">
-                        <div>
-                            <input type="radio" name="priority" id="low" class="inpitRadio" value="Low">
-                            <label for="low">Low</label>
+            <div class="tasksContainer contentWindow">
+                <div class="tasksNewTaskContainer contentWindow">
+                    <h1>New Task</h1>
+                    <form action="submit" id="newTaskForm">
+                        <div class="newTaskFormInput">
+                            <label for="taskTitle">Title</label>
+                            <input type="text" name="taskTitle" id="taskTitle" minlength="1" maxlength="20" placeholder="Enter task name">
                         </div>
-                        <div>
-                            <input type="radio" name="priority" id="medium" class="inpitRadio" value="Medium" >
-                            <label for="medium">Medium</label>
+                        <div class="newTaskFormInput">
+                            <label for="tascDescription">Description</label>
+                            <textarea name="tascDescription" id="tascDescription" cols="30" rows="5" placeholder="Enter task description"></textarea>
                         </div>
-                        <div>
-                            <input type="radio" name="priority" id="high" class="inpitRadio" value="High">
-                            <label for="high">High</label>
+                        <div class="newTaskFormInput">
+                            <label for="projectsToChooseInput">Project:</label>
+                            <input list="projectsToChoose" id="projectsToChooseInput" placeholder="Choose project"/>
+                            <datalist id="projectsToChoose">
+                            </datalist>
                         </div>
-                    </div>
-                    <div class="newTaskFormInput">
-                        <label for="dueDate">DueDate</label>
-                        <input type="date" name="dueDate" id="dueDate">
-                    </div>
-                    <div class="newTaskFormInput" id="newTaskFormInputButtonsContainer">
-                        <button id="cnclTaskBtn" class="btn" type="button">cancel</button>
-                        <button type="button" id="addaddTaskBtn" class="btn">add</button>
-                    </div>
-                </form>
-            </div>
-            <div class="editTaskContainer">
-                <h1>Edit Task</h1>
-                <form action="submit" id="editTaskForm">
-                    <div class="editTaskFormInput">
-                        <label for="edittaskTitle">Title</label>
-                        <input type="text" name="edittaskTitle" id="edittaskTitle" minlength="1" maxlength="20">
-                    </div>
-                    <div class="editTaskFormInput">
-                        <label for="edittascDescription">Description</label>
-                        <textarea name="edittascDescription" id="edittascDescription" cols="30" rows="5"></textarea>
-                    </div>
-                    <div class="editTaskFormInput">
-                        <label for="editprojectsToChooseInput">Project:</label>
-                        <input list="editprojectsToChoose" id="editprojectsToChooseInput"/>
-                        <datalist id="editprojectsToChoose">
-                        </datalist>
-                    </div>
-                    <div class="editTaskFormInput editradioeditTaskFormInput">
-                        <div>
-                            <input type="radio" name="editpriority" id="editlow" class="editinpitRadio" value="Low">
-                            <label for="low">Low</label>
+                        <div class="newTaskFormInput radionewTaskFormInput">
+                            <div>
+                                <input type="radio" name="priority" id="low" class="inpitRadio" value="Low">
+                                <label for="low">Low</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="priority" id="medium" class="inpitRadio" value="Medium" >
+                                <label for="medium">Medium</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="priority" id="high" class="inpitRadio" value="High">
+                                <label for="high">High</label>
+                            </div>
                         </div>
-                        <div>
-                            <input type="radio" name="editpriority" id="editmedium" class="editinpitRadio" value="Medium" >
-                            <label for="medium">Medium</label>
+                        <div class="newTaskFormInput">
+                            <label for="dueDate">DueDate</label>
+                            <input type="date" name="dueDate" id="dueDate">
                         </div>
-                        <div>
-                            <input type="radio" name="editpriority" id="edithigh" class="editinpitRadio" value="High">
-                            <label for="high">High</label>
+                        <div class="newTaskFormInput" id="newTaskFormInputButtonsContainer">
+                            <button id="cnclTaskBtn" class="btn" type="button">cancel</button>
+                            <button type="button" id="addaddTaskBtn" class="btn">add</button>
                         </div>
-                    </div>
-                    <div class="editTaskFormInput">
-                        <label for="dueDate">DueDate</label>
-                        <input type="date" name="dueDate" id="editdueDate">
-                    </div>
-                    <div class="editTaskFormInput" id="editnewTaskFormInputButtonsContainer">
-                        <button id="editcnclTaskBtn" class="btn" type="button">cancel</button>
-                        <button type="button" id="editaddaddTaskBtn" class="btn">save</button>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="newProjectContainer" >
-                <h1>New Project</h1>
-                <form action="" id="newprojectForm">
-                    <div class="newprojectFormInput">
-                        <label for="projectTitle">Title</label>
-                        <input type="text" name="projectTitle" id="projectTitle">
-                    </div>
-                    <div class="newprojectFormInput">
-                        <button id="cnclProjectkBtn" class="btn" type="button">cancel</button>
-                        <button id="addProjectkBtn" class="btn" type="button">add</button>
-                    </div>
-                </form>
-            </div>
-            <div class="renProjectContainer">
-                <h1>Edit Project</h1>
-                <form action="" id="renProjectForm">
-                    <div class="renprojectFormInput">
-                        <label for="renprojectTiTle">New title</label>
-                        <input type="text"  id="renprojectTiTle">
-                    </div>
-                    <div class="renprojectFormInput projectEditButtonsContainer" >
-                        <button id="cancelrenProjbtn" type="button">cancel</button>
-                        <button id="renProjectbtn" type="button">save</button>
-                    </div>
-                </form>
-            </div>
-            <div class="viewTaskContainer">
-                <div class="taskDetailsContainer">
+                    </form>
+                </div>
+                <div class="tasksEditTaskContainer contentWindow">
+                    <h1>Edit Task</h1>
+                    <form action="submit" id="editTaskForm">
+                        <div class="editTaskFormInput">
+                            <label for="edittaskTitle">Title</label>
+                            <input type="text" placeholder="Enter new title" name="edittaskTitle" id="edittaskTitle" minlength="1" maxlength="20">
+                        </div>
+                        <div class="editTaskFormInput">
+                            <label for="edittascDescription">Description</label>
+                            <textarea name="edittascDescription" placeholder="Enter new description"id="edittascDescription" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="editTaskFormInput">
+                            <label for="editprojectsToChooseInput">Project:</label>
+                            <input list="editprojectsToChoose" id="editprojectsToChooseInput" placeholder="Choose project"/>
+                            <datalist id="editprojectsToChoose">
+                            </datalist>
+                        </div>
+                        <div class="editTaskFormInput editradioeditTaskFormInput">
+                            <div>
+                                <input type="radio" name="editpriority" id="editlow" class="editinpitRadio" value="Low">
+                                <label for="low">Low</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="editpriority" id="editmedium" class="editinpitRadio" value="Medium" >
+                                <label for="medium">Medium</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="editpriority" id="edithigh" class="editinpitRadio" value="High">
+                                <label for="high">High</label>
+                            </div>
+                        </div>
+                        <div class="editTaskFormInput">
+                            <label for="dueDate">DueDate</label>
+                            <input type="date" name="dueDate" id="editdueDate">
+                        </div>
+                        <div class="editTaskFormInput" id="editnewTaskFormInputButtonsContainer">
+                            <button id="editcnclTaskBtn" class="btn" type="button">cancel</button>
+                            <button type="button" id="editaddaddTaskBtn" class="btn">save</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tasksTaskEntryContainer contentWindow">
 
                 </div>
-                <div class="viewTaskButtonsContainer">
+                <div class="tasksTasksListContainer contentWindow">
 
                 </div>
-                
             </div>
-            
         </div>
     </div>
     <script src="bundle.js"></script>
